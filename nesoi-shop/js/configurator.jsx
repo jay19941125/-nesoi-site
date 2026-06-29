@@ -123,7 +123,7 @@ function ConfirmStep({ sel }){
           </div>
         </div>
         {!ready && <p className="tiny" style={{ color:"var(--warn)", marginTop:12 }}>請先完成主石、線材、編織法與長度的選擇。</p>}
-        <div className="flex gap8 wrap" style={{ marginTop:18 }}>
+        <div className="flex gap8 wrap cta-stack" style={{ marginTop:18 }}>
           <button className="btn sea block" disabled={!valid} onClick={submit}>送出訂製需求</button>
           <button className="btn ghost" style={{ flex:1 }} disabled={!ready} onClick={() => toast("已加入購物車（測試版）","ok")}>加入購物車</button>
           <button className="btn line" style={{ flex:1 }} onClick={() => toast("已開啟 LINE 詢問（測試版）")}>LINE 詢問設計師</button>

@@ -89,6 +89,10 @@ h1,h2,h3,h4{ font-weight:300; margin:0; }
 .section-pad{ padding-block:clamp(40px,7vh,90px); }
 .center{ text-align:center; }
 
+/* 搭配器主框：grid 子項預設 min-width:auto，會被內部 max-content（步驟列）撐爆版面，
+   一律允許子項收縮，內部 .scroll-x 才能正常水平捲動而不撐寬整頁 */
+.cfg-grid > *{ min-width:0; }
+
 /* ---- cards ---- */
 .card{ background:var(--paper-2); border:1px solid var(--hairline); border-radius:var(--rl); overflow:hidden; transition:.22s; }
 .card.sel{ border-color:var(--sea); box-shadow:0 0 0 2px color-mix(in srgb,var(--sea) 30%, transparent); }
@@ -135,8 +139,13 @@ h1,h2,h3,h4{ font-weight:300; margin:0; }
   .cfg-grid{ grid-template-columns:1fr !important; }
   .cfg-grid aside{ position:static !important; }
   .conf-two{ grid-template-columns:1fr !important; }
+  .home-about{ grid-template-columns:1fr !important; }
 }
 @media (max-width:640px){
   .three-col{ grid-template-columns:1fr !important; }
   .modal-two{ grid-template-columns:1fr !important; }
+}
+@media (max-width:480px){
+  /* 確認步驟的送出／購物車／LINE 三顆按鈕在窄螢幕各自整行，避免文字折成兩行 */
+  .cta-stack > *{ flex:1 1 100% !important; }
 }
