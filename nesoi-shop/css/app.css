@@ -145,3 +145,7 @@ h1,h2,h3,h4{ font-weight:300; margin:0; }
   .three-col{ grid-template-columns:1fr !important; }
   .modal-two{ grid-template-columns:1fr !important; }
 }
+@media (max-width:480px){
+  /* 確認步驟的送出／購物車／LINE 三顆按鈕在窄螢幕各自整行，避免文字折成兩行 */
+  .cta-stack > *{ flex:1 1 100% !important; }
+}
