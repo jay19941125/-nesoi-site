@@ -21,7 +21,7 @@ function Home(){
 
       {/* 品牌介紹 */}
       <section id="about" className="section-pad" style={{ borderTop:"1px solid var(--hairline)" }}>
-        <div className="page" style={{ display:"grid", gridTemplateColumns:"1.1fr .9fr", gap:"clamp(28px,5vw,70px)", alignItems:"center" }}>
+        <div className="page home-about" style={{ display:"grid", gridTemplateColumns:"1.1fr .9fr", gap:"clamp(28px,5vw,70px)", alignItems:"center" }}>
           <div>
             <p className="eyebrow" style={{ marginBottom:14 }}>Brand Story</p>
             <h2 className="serif" style={{ fontSize:"clamp(24px,3.4vw,36px)", letterSpacing:".05em", lineHeight:1.4, marginBottom:20 }}>
